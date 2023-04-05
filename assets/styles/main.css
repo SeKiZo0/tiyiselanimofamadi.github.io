@@ -1,0 +1,65 @@
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    color: gray;
+    background-color: #001220;
+}
+
+.spacer {
+    aspect-ratio: 960/250 ;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0%;
+    padding: 0%;
+}
+
+.layer1 {
+    background-image: url('backgrounds/image_1.svg');
+}
+
+.layer2 {
+    background-image: url('backgrounds/image_2.svg');
+}
+
+.background1 {
+    background-color: #001220;
+    margin: 0%;
+    padding: 0%;
+    color: gray;
+}
+
+.background1 p{
+    margin-bottom: 0%;
+}
+
+.background1 h1{
+    margin-top: 0%;
+}
+
+.background2 {
+    background-color: #C62368;
+    margin: 0%;
+    padding: 0%;
+    color: gray;
+}
+
+.background2 p{
+    margin-bottom: 0%;
+}
+
+.background2 h1{
+    margin-top: 0%;
+}
+/*stuff for the project links*/
+.card {
+    width: 400px;
+    transition: all 0.3s;
+    margin: 1%;
+}
+
+.card:hover {
+    transform:scale(1.15);
+}
