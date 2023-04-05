@@ -55,11 +55,15 @@ body {
 }
 /*stuff for the project links*/
 .card {
-    width: 400px;
     transition: all 0.3s;
-    margin: 1%;
 }
 
 .card:hover {
     transform:scale(1.15);
+}
+
+.centerItems {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
 }
