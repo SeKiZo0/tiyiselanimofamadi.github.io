@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0px;
     width: 100%;
@@ -7,14 +11,15 @@ body {
 }
 
 .IntroText {
-    display: flex;
+    display: grid;
     justify-content: center;
+    align-content: center;
     font-family: 'poppins', sans-serif;
     font-size: 50px;
+    min-height: 100vh;
 }
 
 .IntroText .GradientText{
-    display: flex;
     font-family: 'poppins', sans-serif;
     font-size: 50px;
     background-image: linear-gradient(43deg, #022559 0%, #6969fa 100%);

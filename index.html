@@ -24,17 +24,15 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-default bg-dark navbar-dark sticky-top">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-sm navbar-toggleable-sm bg-dark navbar-dark sticky-top">
       <div class="navbar-header">
-        <button type="navbar-toggler" class="navbar-toggle collapsed bg-dark" data-toggle="collapse"
-          data-target="#navbar-collapse">
-          <span class="navbar-toggler-icon bg-dark"></span>
-        </button>
         <a class="navbar-brand" href="#">My Website</a>
       </div>
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> 
+      <div class="collapse navbar-collapse" id="navbarNav">   
+        <ul class="navbar-nav">
           <li>
             <a class="nav-link" href="#about_me">About me</a>
           </li>
@@ -44,13 +42,16 @@
           <li>
             <a class="nav-link" href="#projects">Projects</a>
           </li>
+          <li>
+            <a class="nav-link" href="#contact_me">Contact Me</a>
+          </li>
         </ul>
-      </div>
-    </div>
+      </div>       
   </nav>
   <section class="background1">
     <div class="IntroText">
-      <p>Hi, my name is<p class="GradientText">Tiyiselani Mofamadi</p></p>
+      <p>Hi, my name is<b class="GradientText">Tiyiselani Mofamadi</b>.</p>
+      <p>I am a <b class="GradientText">Full-Stack Developer</b>.</p>
     </div>
     <div>
       <a id="about_me"></a>
@@ -91,6 +92,13 @@
       </div>
     </div>
   </section>
+  <div class="spacer layer1"></div>
+  <section class="background2">
+    <div id="contact_me">
+    <h1>Contact Me</h1>
+  </div>
+  </section>
+  <script src="assets/scripts/app.js"></script>
 </body>
 
 </html>
