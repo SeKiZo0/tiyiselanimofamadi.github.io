@@ -20,55 +20,84 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <link rel="stylesheet" href="assets\styles\main.css">
-  <title>Tiyiselani' portfolio</title>
+
+  <link rel="stylesheet" href="assets/styles/transitions.css">
+
+  <link rel="stylesheet" href="assets/styles/backgrounds.css">
+  <title>Tiyiselani's portfolio</title>
 </head>
 
 <body>
+
+  <div class="transition transition-3 is-active"></div>
+
   <nav class="navbar navbar-expand-sm navbar-toggleable-sm bg-dark navbar-dark sticky-top">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">My Website</a>
-      </div>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> 
-      <div class="collapse navbar-collapse" id="navbarNav">   
-        <ul class="navbar-nav">
-          <li>
-            <a class="nav-link" href="#about_me">About me</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#progress">Progress</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#contact_me">Contact Me</a>
-          </li>
-        </ul>
-      </div>       
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Tiyiselani's portfolio</a>
+    </div>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li>
+          <a class="nav-link" href="#about_me">About me</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#skills">Progress</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#contact_me">Contact Me</a>
+        </li>
+      </ul>
+    </div>
   </nav>
   <section class="background1">
-    <div class="IntroText">
-      <p>Hi, my name is<b class="GradientText">Tiyiselani Mofamadi</b>.</p>
-      <p>I am a <b class="GradientText">Full-Stack Developer</b>.</p>
-    </div>
     <div>
-      <a id="about_me"></a>
-      <h1>About me</h1>
-      <p>Ad consequat cupidatat dolore aliquip duis. Magna aliqua proident aute sunt ea tempor eu labore id. Do deserunt
-        sint nulla proident velit incididunt veniam elit. Irure commodo occaecat elit exercitation consequat proident
-        excepteur pariatur velit laboris amet sit. Sunt ullamco fugiat eu elit occaecat non tempor irure sit aute.</p>
+      <div class="stars-container">
+        <div id="stars" class="stars"></div>
+        <div id="stars2" class="stars"></div>
+        <div id="stars3" class="stars"></div>
+      </div>
+      <div>
+        <div class="cloud one"></div>
+        <div class="cloud two"></div>
+        <div class="cloud three"></div>
+      </div>
+      <div class="IntroText">
+        <p>Hi, I am<b class="GradientText">Tiyiselani Mofamadi</b>.</br>
+          I am a <b class="GradientText">Full-Stack Developer</b>.</p>
+      </div>
     </div>
   </section>
   <div class="spacer layer1"></div>
   <section class="background2">
-    <div>
-      <a id="progress"></a>
-      <h1>Progress</h1>
-      <p>Excepteur deserunt exercitation officia sint minim eiusmod. Enim sit quis nostrud et. Sit labore amet id aute
-        dolore nostrud ut. Ullamco eu exercitation ad consectetur tempor voluptate tempor proident non ad. Exercitation
-        exercitation minim aliqua dolore.</p>
+    <div id="aboutme">
+      <a id="about_me"></a>
+      <h1>About me</h1>
+      <p>I am a student at University of Pretoria. I am currently studying Bcom informatics. I am a sports, car and anime enjoyer. </p>
+    </div>
+    <a id="skills"></a>
+    <h1>Skills</h1>
+    <div class="row">
+      <div class="col-md-4 col-sm-12 frontendSkill">
+        <div>HTML/css</div>
+        <div>JavaScript</div>
+        <div>jQuery</div>
+      </div>
+      <div class="col-md-4 col-sm-12 backendSkill">
+        <div>C#</div>
+        <div>MsSQL</div>
+        <div>asp.Net</div>
+      </div>
+      <div class="col-md-4 col-sm-12 otherSkill">
+        <div>R</div>
+        <div>SAS</div>
+      </div>
     </div>
   </section>
   <div class="spacer layer2"></div>
@@ -84,9 +113,26 @@
         <div class="card">
           <div class="card-body">
             <h4 class="card-title">untitled unmastered</h4>
-            <p class="card-text">This is where I test out designs and show how versitile I am by showing ho I am able to
-              use othe frameworks</p>
-            <a href="projects\untitled unmastered\index.html" class="btn btn-primary">view project</a>
+            <p class="card-text">This is where I test out designs and show how versitile I am by showing how I am able
+              to use other frameworks</p>
+            <a href="projects\untitled unmastered\index.html" target="_blank" class="trans btn btn-primary">view
+              project</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">woofer</h4>
+            <p class="card-text">This is a twitter clone named bark. This aims have similar functions to twitter, like
+              being able to post a tweet, liking tweets and sharing them. For now I can only store tweets</p>
+            <a href="projects/twitter clone/woofer.html" target="_blank" class="trans btn btn-primary">view project</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Salary calculator</h4>
+            <p class="card-text">This is a twitter clone named bark. This aims have similar functions to twitter, like
+              being able to post a tweet, liking tweets and sharing them. For now I can only store tweets</p>
+            <a href="projects/Salary Calculator/index.html" target="_blank" class="trans btn btn-primary">view project</a>
           </div>
         </div>
       </div>
@@ -95,10 +141,11 @@
   <div class="spacer layer1"></div>
   <section class="background2">
     <div id="contact_me">
-    <h1>Contact Me</h1>
-  </div>
+      <h1>Contact Me</h1>
+    </div>
   </section>
-  <script src="assets/scripts/app.js"></script>
+  <script src="assets/scripts/app.js" type="module" defer></script>
+  <script src="assets/scripts/transition.js"></script>
 </body>
 
 </html>

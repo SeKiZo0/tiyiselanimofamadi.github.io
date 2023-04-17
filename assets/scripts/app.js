@@ -1,28 +1,37 @@
+//scroll tracker api
+import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js';
+
 /*this is to highlight the link you are currently on*/
 $('body').scrollspy({target: ".navbar"});
-/*
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+$(window).scroll(function() {
+  parallax();
+})
 
-      // Store hash
-      var hash = this.hash;
+function parallax() {
+  var wScroll = $(window).scrollTop();
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
+  $('.IntroText').css('margin-bottom', -(wScroll*0.35)+'px');
 
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
+}
+
+const stars = document.querySelector(".stars2");
+
+const scrollTrackingTimeline = new ScrollTimeline({
+  source: document.scrollingElement,
+  orientation: "block",
+  scrollOfsets: [CSS.percent(0), CSS.percent(100)],
 });
-*/
+
+stars2.animate(
+  {
+    transform: ["translateY(-1300px)", "translateY(-2400px)"],
+  },
+  {
+    duration: 1,
+    timeline: scrollTrackingTimeline,
+  }
+)
+
+document.querySelector('#about_me').textContent = 'ggez';
+document.querySelector('#about_me').style.color = 'blue';
