@@ -17,6 +17,7 @@ body {
 .aWoof {
     background-color: #A2DED0;
     margin: 2%;
+    padding: 10px;
 }
 
 .woof-container {

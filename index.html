@@ -19,11 +19,18 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <link rel="stylesheet" href="assets\styles\main.css">
+  <link rel="stylesheet" href="assets/styles/main.css">
 
   <link rel="stylesheet" href="assets/styles/transitions.css">
 
   <link rel="stylesheet" href="assets/styles/backgrounds.css">
+
+  <link rel="stylesheet" href="assets/styles/horizontalScroll.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+
   <title>Tiyiselani's portfolio</title>
 </head>
 
@@ -31,7 +38,7 @@
 
   <div class="transition transition-3 is-active"></div>
 
-  <nav class="navbar navbar-expand-sm navbar-toggleable-sm bg-dark navbar-dark sticky-top">
+  <nav class="anchor-nav navbar navbar-expand-sm navbar-toggleable-sm bg-dark navbar-dark sticky-top">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Tiyiselani's portfolio</a>
     </div>
@@ -42,21 +49,21 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li>
-          <a class="nav-link" href="#about_me">About me</a>
+          <a class="nav-link anchor" href="#about_me">About me</a>
         </li>
         <li>
-          <a class="nav-link" href="#skills">Progress</a>
+          <a class="nav-link anchor" href="#skills">Progress</a>
         </li>
         <li>
-          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link anchor" href="#projects">Projects</a>
         </li>
         <li>
-          <a class="nav-link" href="#contact_me">Contact Me</a>
+          <a class="nav-link anchor" href="#contact_me">Contact Me</a>
         </li>
       </ul>
     </div>
   </nav>
-  <section class="background1">
+  <section class="background1 full-screen ">
     <div>
       <div class="stars-container">
         <div id="stars" class="stars"></div>
@@ -70,80 +77,93 @@
       </div>
       <div class="IntroText">
         <p>Hi, I am<b class="GradientText">Tiyiselani Mofamadi</b>.</br>
-          I am a <b class="GradientText">Full-Stack Developer</b>.</p>
+          I am a <b class="GradientText">Junior Developer</b>.</p>
       </div>
     </div>
   </section>
   <div class="spacer layer1"></div>
-  <section class="background2">
-    <div id="aboutme">
-      <a id="about_me"></a>
-      <h1>About me</h1>
-      <p>I am a student at University of Pretoria. I am currently studying Bcom informatics. I am a sports, car and anime enjoyer. </p>
-    </div>
-    <a id="skills"></a>
-    <h1>Skills</h1>
-    <div class="row">
-      <div class="col-md-4 col-sm-12 frontendSkill">
-        <div>HTML/css</div>
-        <div>JavaScript</div>
-        <div>jQuery</div>
-      </div>
-      <div class="col-md-4 col-sm-12 backendSkill">
-        <div>C#</div>
-        <div>MsSQL</div>
-        <div>asp.Net</div>
-      </div>
-      <div class="col-md-4 col-sm-12 otherSkill">
-        <div>R</div>
-        <div>SAS</div>
-      </div>
-    </div>
-  </section>
-  <div class="spacer layer2"></div>
-  <section class="background1">
-    <div>
-      <a id="projects"></a>
-      <h1>Projects</h1>
-      <p>Non fugiat labore minim id occaecat. Magna occaecat proident est sit anim. Elit labore do est officia labore ea
-        consectetur qui laborum. Et laboris aliquip ex deserunt reprehenderit nostrud anim officia. Commodo consectetur
-        dolor culpa eu reprehenderit reprehenderit labore eiusmod.</p>
+  <section id="panels">
+    <div id="panels-container" style="width: 300%;">
+      <article class="background2 panel full-screen" id="about_me">
+        <div id="aboutme">
+          <h1>About me</h1>
+          <p>I am a student at University of Pretoria. I am currently studying Bcom informatics. I am a sports, car and
+            anime enjoyer. </p>
+        </div>
+      </article>
+      <article class="background2 panel full-screen" id="skills">
+        <div><h1>Skills</h1></div>
+        <hr/>
+        <div class="skillContainer">
+          <div class="col-md-4 col-sm-12 frontendSkill">
+            <div class="card">
+              <div>HTML/css</div>
+              <div>JavaScript</div>
+              <div>jQuery</div>
+              <div>Bootstrap</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12 backendSkill">
+            <div class="card">
+              <div>C#</div>
+              <div>MsSQL</div>
+              <div>asp.Net</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12 otherSkill">
+            <div class="card">
+              <div>R</div>
+              <div>SAS</div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!--<div class="spacer layer2"></div>-->
+      <article class="background1 panel full-screen" id="projects">
+        <div>
+          <h1>Projects</h1>
+          <p>These are some projects that I made.</p>
 
-      <div class="card-columns" style="margin: 3%;">
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">untitled unmastered</h4>
-            <p class="card-text">This is where I test out designs and show how versitile I am by showing how I am able
-              to use other frameworks</p>
-            <a href="projects\untitled unmastered\index.html" target="_blank" class="trans btn btn-primary">view
-              project</a>
+          <div class="card-columns" style="margin: 3%;">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">woofer chat</h4>
+                <p class="card-text">This is my chat app that i made using react as practice and to try it out.</p>
+                <a href="https://mt-chatapp.netlify.app/" target="_blank" class="trans btn btn-primary">view
+                  project</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">woofer</h4>
+                <p class="card-text">This is a twitter clone named bark. This aims have similar functions to twitter,
+                  like
+                  being able to post a tweet, liking tweets and sharing them. For now I can only store tweets</p>
+                <a href="projects/twitter clone/woofer.html" target="_blank" class="trans btn btn-primary">view
+                  project</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Salary calculator</h4>
+                <p class="card-text">This is a twitter clone named bark. This aims have similar functions to twitter,
+                  like
+                  being able to post a tweet, liking tweets and sharing them. For now I can only store tweets</p>
+                <a href="projects/Salary Calculator/index.html" target="_blank" class="trans btn btn-primary">view
+                  project</a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">woofer</h4>
-            <p class="card-text">This is a twitter clone named bark. This aims have similar functions to twitter, like
-              being able to post a tweet, liking tweets and sharing them. For now I can only store tweets</p>
-            <a href="projects/twitter clone/woofer.html" target="_blank" class="trans btn btn-primary">view project</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">Salary calculator</h4>
-            <p class="card-text">This is a twitter clone named bark. This aims have similar functions to twitter, like
-              being able to post a tweet, liking tweets and sharing them. For now I can only store tweets</p>
-            <a href="projects/Salary Calculator/index.html" target="_blank" class="trans btn btn-primary">view project</a>
-          </div>
-        </div>
-      </div>
+      </article>
     </div>
   </section>
-  <div class="spacer layer1"></div>
-  <section class="background2">
-    <div id="contact_me">
-      <h1>Contact Me</h1>
-    </div>
-  </section>
+      <div class="spacer layer1"></div>
+      <section class="background2" id="contact_me">
+        <div>
+          <h1>Contact Me</h1>
+        </div>
+      </section>
   <script src="assets/scripts/app.js" type="module" defer></script>
   <script src="assets/scripts/transition.js"></script>
 </body>
