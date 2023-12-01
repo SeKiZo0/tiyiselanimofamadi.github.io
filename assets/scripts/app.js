@@ -30,17 +30,20 @@ stars2.animate(
   }
 )
 
-gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+//horizontal scroll
 
-/* Main navigation */
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+/*
+
+// Main navigation 
 let panelsSection = document.querySelector("#panels"),
 	panelsContainer = document.querySelector("#panels-container"),
 	tween;
-  /*this is selecting all the anchors*/
+  //this is selecting all the anchors
 document.querySelectorAll(".anchor").forEach(anchor => {
 	anchor.addEventListener("click", function(e) {
 		e.preventDefault();
-    /*this targets all the listed ids */
+    //this targets all the listed ids
 		let targetElem = document.querySelector(e.target.getAttribute("href")),
 			y = targetElem;
 		if (targetElem && panelsContainer.isSameNode(targetElem.parentElement)) {
@@ -58,7 +61,7 @@ document.querySelectorAll(".anchor").forEach(anchor => {
 	});
 });
 
-/* Panels */
+// Panels 
 const panels = gsap.utils.toArray("#panels-container .panel");
 tween = gsap.to(panels, {
 	xPercent: -100 * ( panels.length - 1 ),
@@ -75,4 +78,4 @@ tween = gsap.to(panels, {
 		},
 		end: () =>  "+=" + (panelsContainer.offsetWidth - innerWidth)
 	}
-});
+});*/
