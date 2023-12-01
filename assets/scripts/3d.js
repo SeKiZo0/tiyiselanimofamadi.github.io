@@ -19,7 +19,7 @@ renderer.setClearColor(0x000000, 0)
 
 const loader = new GLTFLoader();
 
-loader.load('/3D objects/gaming_desktop_pc/scene.gltf', function (gltf) {
+loader.load('../../public/3D objects/gaming_desktop_pc/scene.gltf', function (gltf) {
     gltf.scene.rotation.y = 4.72
     gltf.scene.rotation.x = 0.07
     scene.add(gltf.scene);
