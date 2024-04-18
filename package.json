@@ -1,17 +1,25 @@
 {
-  "name": "tiyiselaniportfolio",
+  "name": "tiyiselaniportfolionext",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "vite": "^5.0.0"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "three": "^0.159.0"
+    "@gsap/react": "^2.1.0",
+    "@react-three/drei": "^9.99.0",
+    "@react-three/fiber": "^8.15.16",
+    "autoprefixer": "10.4.17",
+    "framer-motion": "^11.0.5",
+    "gsap": "^3.12.5",
+    "next": "14.1.0",
+    "postcss": "8.4.35",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.4.1",
+    "three": "^0.161.0"
   }
 }
