@@ -12,7 +12,7 @@ function Hero() {
 {letter}
         </h1>
     })}</div>
-        
+        hey hey
     </div>
   )
 }
